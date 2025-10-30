@@ -1,17 +1,18 @@
 {
-  "name": "vite-react-ts-template",
+  "name": "pet-emergency-ai",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "vercel-build": "vite build"
   },
   "dependencies": {
-    "@lumi.new/sdk": "0.2.1",
+    "@google/generative-ai": "^0.21.0",
     "framer-motion": "12.23.11",
     "lucide-react": "0.540.0",
     "react": "18.3.1",

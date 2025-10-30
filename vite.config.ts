@@ -1,4 +1,3 @@
-
 import type { UserConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { defineConfig } from 'vite'
@@ -43,6 +42,15 @@ export default defineConfig(({ mode }) => {
     optimizeDeps: {
       exclude: ['lucide-react'],
     },
+    // 開發環境 API 代理設定 (如果需要連接到其他伺服器)
+    server: {
+      proxy: {
+        '/api': {
+          // 本地開發時,代理到 Vercel 開發伺服器
+          target: 'http://localhost:3000',
+          changeOrigin: true,
+        }
+      }
+    }
   }
 })
-
